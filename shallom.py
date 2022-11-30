@@ -1,3 +1,4 @@
+from msilib import add_data
 import streamlit as st
 import os
 from email.message import EmailMessage
@@ -51,7 +52,7 @@ if result:
         Telepon=st.text_input("No Telepon")
         submission = st.form_submit_button(label="Submit")
     if submission== True:
-            addData(Nama, choice, Alamat, Email, Telepon)
+            add_data(Nama, choice, Alamat, Email, Telepon)
             st.success("Successfully submitted")
 
 def addData(a,b,c,d,e):
